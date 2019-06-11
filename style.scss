@@ -22,6 +22,11 @@ $value_rem2 : 4rem;
     width: 100%;
     background-position: center;
 }
+@mixin aside_center {
+        padding: $value_rem1;
+        font-size: $value_rem1;
+        font-family: $value_font1;
+}
 
 
 * {
@@ -105,17 +110,15 @@ main {
     flex-flow: column;
     justify-content: center;
     margin: 1rem;
+    aside {
+        @include aside_center;
+        border: 2px solid #dad6ab;
+    }
+    article {
+        @include aside_center;
+    }
 }
 
-aside, article {
-    padding: $value_rem1;
-    font-size: $value_rem1;
-    font-family: $value_font1;
-}
-
-aside {
-    border: 2px solid #dad6ab;
-}
 
 footer {
         ul {
@@ -139,7 +142,7 @@ footer {
 } */
 
 @media screen and (min-width: 768px) {
-    .cards {
+ //   .cards {
         .card {
             flex-flow: row nowrap;
             align-items: flex-start;
@@ -149,7 +152,7 @@ footer {
                 padding: 0 $value_rem1 $value_rem1 $value_rem1;
             }
         }
-    }
+//    }
     nav {
         ul {
         justify-content: flex-end;
@@ -158,15 +161,17 @@ footer {
 
     main {
         flex-flow: row nowrap;
+        article {
+            width: 50%;
+        }
+        aside {
+            width: 25%;
+        }
     }
 
-    article {
-        width: 50%;
-    }
+    
 
-    aside {
-        width: 25%;
-    }
+    
 }
 
 @media screen and (min-width: 1024px) {
@@ -180,7 +185,7 @@ footer {
             }
             .card-text {
                 width: 60%;
-            }
+            }  
         }
-    }   
+    } 
 }
