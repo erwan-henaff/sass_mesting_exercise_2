@@ -28,7 +28,6 @@ $value_rem2 : 4rem;
         font-family: $value_font1;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -52,10 +51,6 @@ nav {
     }
 }
 
-a {
-    @include a_style;
-}
-
 header {
     height: 20rem;
     background-image: url(images_website/header.jpg);
@@ -68,19 +63,6 @@ header {
         font-size: 2rem;
     }
 }
-
-.img-mountain {
-    background-image: url(images_website/mountain.jpg);
-}
-
-.img-surfer {
-    background-image: url(images_website/surfer.jpg);
-}
-
-.img-tree {
-    background-image: url(images_website/tree.jpg);
-}
-
 
 .img {
     @include img_style;
@@ -102,6 +84,15 @@ header {
             padding-top: §value_rem1;
             font-family: $value_font1;
         }
+        .img-mountain {
+            background-image: url(images_website/mountain.jpg);
+        }        
+        .img-surfer {
+            background-image: url(images_website/surfer.jpg);
+        }
+        .img-tree {
+            background-image: url(images_website/tree.jpg);
+        }
     }
 }
 
@@ -119,7 +110,6 @@ main {
     }
 }
 
-
 footer {
         ul {
         display: flex;
@@ -135,7 +125,6 @@ footer {
             }
         }
 }
-
 
 /* @media screen and (min-width: 500px) {
   
@@ -183,6 +172,6 @@ footer {
             .card-text {
                 width: 60%;
             }  
-        }
-    }    
+        }  
+    }  
 }

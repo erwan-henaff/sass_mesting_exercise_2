@@ -19,11 +19,6 @@ nav ul {
       font-size: 1.2rem;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
 
-a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
-
 header {
   height: 20rem;
   background-image: url(images_website/header.jpg);
@@ -34,15 +29,6 @@ header {
   header h1 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 2rem; }
-
-.img-mountain {
-  background-image: url(images_website/mountain.jpg); }
-
-.img-surfer {
-  background-image: url(images_website/surfer.jpg); }
-
-.img-tree {
-  background-image: url(images_website/tree.jpg); }
 
 .img {
   background-size: cover;
@@ -71,6 +57,12 @@ header {
     .cards .card .card-text {
       padding-top: §value_rem1;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+    .cards .card .img-mountain {
+      background-image: url(images_website/mountain.jpg); }
+    .cards .card .img-surfer {
+      background-image: url(images_website/surfer.jpg); }
+    .cards .card .img-tree {
+      background-image: url(images_website/tree.jpg); }
 
 main {
   display: flex;
