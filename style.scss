@@ -1,0 +1,186 @@
+$value_font1 : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$value_rem1 : 1rem;
+$value_rem2 : 4rem;
+
+@mixin card_prop {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; 
+}
+@mixin a_style {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: $value_font1;
+}
+@mixin li_style {
+    list-style: none;
+    padding: $value_rem1;
+}
+@mixin img_style {
+    background-size: cover;
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+        li {
+            @include li_style;
+            a {
+                color: #0e749e;
+                @include a_style;
+            }
+        }
+    }
+}
+
+a {
+    @include a_style;
+}
+
+header {
+    height: 20rem;
+    background-image: url(images_website/header.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: §value_rem1;
+    h1 {
+        font-family: $value_font1;
+        font-size: 2rem;
+    }
+}
+
+.img-mountain {
+    background-image: url(images_website/mountain.jpg);
+}
+
+.img-surfer {
+    background-image: url(images_website/surfer.jpg);
+}
+
+.img-tree {
+    background-image: url(images_website/tree.jpg);
+}
+
+
+.img {
+    @include img_style;
+}
+
+.cards {
+    @include card_prop;
+    .card {
+        @include card_prop;
+        padding: $value_rem1;
+        background-color: #e0ddb2;
+        margin: $value_rem1;
+        border: 2px solid #dad6ab;
+        border-radius: 5px;
+        .img {
+            @include img_style;
+        }
+        .card-text {
+            padding-top: §value_rem1;
+            font-family: $value_font1;
+        }
+    }
+}
+
+main {
+    display: flex; 
+    flex-flow: column;
+    justify-content: center;
+    margin: 1rem;
+}
+
+aside, article {
+    padding: $value_rem1;
+    font-size: $value_rem1;
+    font-family: $value_font1;
+}
+
+aside {
+    border: 2px solid #dad6ab;
+}
+
+footer {
+        ul {
+        display: flex;
+        justify-content: center;
+        height: $value_rem2;
+        background-color: #016690;
+            li {
+                @include li_style;
+                a {
+                    @include a_style;
+                    color: #fff;
+                }
+            }
+        }
+}
+
+
+/* @media screen and (min-width: 500px) {
+  
+} */
+
+@media screen and (min-width: 768px) {
+    .cards {
+        .card {
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            width: 80%;
+            margin: 0.5rem;
+            .card-text {
+                padding: 0 $value_rem1 $value_rem1 $value_rem1;
+            }
+        }
+    }
+    nav {
+        ul {
+        justify-content: flex-end;
+        }
+    }
+
+    main {
+        flex-flow: row nowrap;
+    }
+
+    article {
+        width: 50%;
+    }
+
+    aside {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cards {
+        flex-flow: row wrap;
+        justify-content: center;
+        .card {
+            width: 45%;
+            .img {
+                width: 40%;
+            }
+            .card-text {
+                width: 60%;
+            }
+        }
+    }   
+}
