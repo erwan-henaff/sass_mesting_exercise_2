@@ -77,14 +77,15 @@ main {
   flex-flow: column;
   justify-content: center;
   margin: 1rem; }
-
-aside, article {
-  padding: 1rem;
-  font-size: 1rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
-
-aside {
-  border: 2px solid #dad6ab; }
+  main aside {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border: 2px solid #dad6ab; }
+  main article {
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
 
 footer ul {
   display: flex;
@@ -115,10 +116,10 @@ footer ul {
     justify-content: flex-end; }
   main {
     flex-flow: row nowrap; }
-  article {
-    width: 50%; }
-  aside {
-    width: 25%; } }
+    main article {
+      width: 50%; }
+    main aside {
+      width: 25%; } }
 
 @media screen and (min-width: 1024px) {
   .cards {

@@ -142,7 +142,7 @@ footer {
 } */
 
 @media screen and (min-width: 768px) {
- //   .cards {
+    .cards {
         .card {
             flex-flow: row nowrap;
             align-items: flex-start;
@@ -152,7 +152,7 @@ footer {
                 padding: 0 $value_rem1 $value_rem1 $value_rem1;
             }
         }
-//    }
+    }
     nav {
         ul {
         justify-content: flex-end;
@@ -168,9 +168,6 @@ footer {
             width: 25%;
         }
     }
-
-    
-
     
 }
 
@@ -187,5 +184,5 @@ footer {
                 width: 60%;
             }  
         }
-    } 
+    }    
 }
